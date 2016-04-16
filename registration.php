@@ -28,7 +28,7 @@ if (!empty($_POST['login']) and preg_match("/^[0-9a-zA-Z_.]{4,8}$/", $login)
         echo("Извините, введённый вами логин уже зарегистрирован. Введите другой логин.");
     } else {
         $result2 = mysqli_query($db,"INSERT INTO myusers (login,password) VALUES('$login','$password')");
-        mkdir(__DIR__ . '/users/' . $login,0600);
+        mkdir(__DIR__ . '/users/' . $login, 0600);
         echo "Регистрация успешно завершена";
 
     }
