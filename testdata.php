@@ -2,7 +2,6 @@
 require "functions.php";
 $login = $loginErr = "";
 $password = $passwordErr = "";
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["login"])) {
         $loginErr = "Введите логин";

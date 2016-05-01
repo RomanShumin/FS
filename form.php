@@ -1,3 +1,4 @@
+<?php require "registration.php"?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,8 +6,8 @@
 </head>
 <body>
 <h2>Страница регистрации</h2>
-<?php require "registration.php"?>
 <p><span class="error" </span></p>
+
 <form method="post">
     <label>Логин:</label>
     <input type="text" name="login" value="<?php  echo $login;?>">
@@ -17,9 +18,9 @@
     <span class="error">* <?php echo $passwordErr;?></span>
     <br><br>
 
-    <p>
+    <div>
         <input type="submit" name="submit" value="Зарегистрироваться">
-    </p>
+    </div>
     <a href="EntryPage.php">Войти</a>
 </form>
 </body>

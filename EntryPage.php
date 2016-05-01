@@ -1,4 +1,5 @@
 <?php
+require("testdata.php");
 session_start();
 ?>
 <!DOCTYPE html>
@@ -8,7 +9,6 @@ session_start();
 </head>
 <body>
 <h2>Cтраница входа</h2>
-<?php require ("testdata.php")  ?>
 <p><span class="error" </span></p>
 
     <form method="post">
