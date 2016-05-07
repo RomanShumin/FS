@@ -2,14 +2,14 @@
 require "functions.php";
 $login= $loginErr ="";
 $password= $passwordErr ="";
-//$verificationLogin=preg_match("/^[0-9a-zA-Z_.]{4,8}$/", $login);
-//$verificationPassword=preg_match("/^[0-9a-zA-Z]{4,8}$/", $password);
+$verificationLogin="/^[0-9a-zA-Z_.]{4,8}$/";
+$verificationPassword=preg_match("/^[0-9a-zA-Z]{4,8}$/", $password);
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["login"])) {
         $loginErr = "Введите логин";
     } else {
         $login = ($_POST["login"]);
-        if (!preg_match("/^[0-9a-zA-Z_.]{4,8}$/", $login)) {
+        if (!preg_match($verificationLogin, $login)) {
             $loginErr = "Недопустимый логин";
         }
     }

@@ -18,4 +18,9 @@ function authenticateUser($login,$password,$db){
 if (password_verify($password,$myrow['password'])) {
     $_SESSION['login'] = $myrow['login'];
     $_SESSION['id'] = $myrow['id'];
-}}
+    echo "Вы успешно вошли на сайт";
+}
+    else {
+        echo "Неверный логин или пароль";
+    }
+}

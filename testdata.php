@@ -24,7 +24,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 if (!empty($_POST['login']) and preg_match("/^[0-9a-zA-Z_.]{4,8}$/", $login)
     and (!empty($_POST['password']) and preg_match("/^[0-9a-zA-Z]{4,8}$/", $password))) {
     authenticateUser($login, $password, $db);
-    echo 'Вы успешно вошли на сайт.';
-} else{
-    echo 'Извините, введённый вами login или пароль неверный.';
 }
