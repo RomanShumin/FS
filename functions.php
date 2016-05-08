@@ -35,6 +35,7 @@ function addUser($login, $password,$db) {
     $password = password_hash($password, PASSWORD_DEFAULT);
     mysqli_query($db,"INSERT INTO myusers (login,password) VALUES('$login','$password')");
         echo "Региcтрация успешно завершена";
+        mkdir(__DIR__ . '/users/' . $login, 0600);
 }}}
 
 function authenticateUser($login,$password,$db){

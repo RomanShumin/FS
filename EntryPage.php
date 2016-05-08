@@ -1,6 +1,7 @@
 <?php
-require("testdata.php");
+require("functions.php");
 session_start();
+authenticateUser($login,$password,$db)
 ?>
 <!DOCTYPE html>
 <html>
