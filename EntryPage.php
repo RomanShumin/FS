@@ -23,7 +23,7 @@ authenticateUser($login,$password,$db)
         <br><br>
         <input type="submit" name="submit" value="Войти">
         <br><br>
-        <a href="form.php">Зарегистироваться</a>
+        <a href="index.">Зарегистироваться</a>
     </form>
 
 <?php

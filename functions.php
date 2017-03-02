@@ -23,8 +23,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-function addUser($login, $password,$db) {
-    if (!empty($_POST['login']) and preg_match("/^[0-9a-zA-Z_.]{4,8}$/", $login)
+ function addUser($login, $password,$db) {
+    if (!empty($_POST['login']) and preg_match($GLOBALS['verificationLogin'], $login)
         and (!empty($_POST['password']) and preg_match("/^[0-9a-zA-Z]{4,8}$/", $password))) {
     $result = mysqli_query($db,"SELECT id FROM myusers WHERE login='$login'");
     $myrow = mysqli_fetch_array($result);
